@@ -37,6 +37,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4Y-y2-AqX">
                                 <rect key="frame" x="179.5" y="256" width="55" height="30"/>
                                 <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkF-z7-PLQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conversion Rate" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-r9-T6n">
                                 <rect key="frame" x="52" y="93" width="310" height="34"/>
@@ -62,6 +65,12 @@
                             <constraint firstItem="DF8-sy-uED" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tGq-dc-SMr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="conversionAmount" destination="RZw-Wy-oSB" id="2Xa-p4-OaB"/>
+                        <outlet property="conversionRate" destination="yjy-r9-T6n" id="37J-6Q-xXS"/>
+                        <outlet property="converted" destination="DF8-sy-uED" id="IPe-Ku-fp7"/>
+                        <outlet property="currency" destination="zo5-Xe-V95" id="Kc7-35-xYA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
