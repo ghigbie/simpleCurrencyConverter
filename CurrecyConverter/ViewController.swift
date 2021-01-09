@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     @IBAction func convert(_ sender: Any) {
         let rate = Double(conversionRate.text!)!
         let amount = Double(conversionAmount.text!)!
+        let conversion = rate * amount
+        
+        converted.text = "\(conversion)"
+        
     }
     
 }
