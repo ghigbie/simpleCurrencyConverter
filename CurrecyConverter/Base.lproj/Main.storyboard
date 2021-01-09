@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrecyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$566.56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF8-sy-uED">
+                                <rect key="frame" x="140" y="44" width="134" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount to be Converted" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZw-Wy-oSB">
+                                <rect key="frame" x="52" y="148" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zo5-Xe-V95">
+                                <rect key="frame" x="169.5" y="208" width="75" height="32"/>
+                                <segments>
+                                    <segment title="💵"/>
+                                    <segment title="💴"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4Y-y2-AqX">
+                                <rect key="frame" x="179.5" y="256" width="55" height="30"/>
+                                <state key="normal" title="Convert"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conversion Rate" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-r9-T6n">
+                                <rect key="frame" x="52" y="93" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RZw-Wy-oSB" secondAttribute="trailing" constant="52" id="59t-Ot-kEt"/>
+                            <constraint firstItem="N4Y-y2-AqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fp-WU-kAB"/>
+                            <constraint firstItem="RZw-Wy-oSB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BQS-iS-1yg"/>
+                            <constraint firstItem="yjy-r9-T6n" firstAttribute="top" secondItem="DF8-sy-uED" secondAttribute="bottom" constant="8" symbolic="YES" id="auM-g9-wJ4"/>
+                            <constraint firstItem="yjy-r9-T6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="c1D-ah-Yuf"/>
+                            <constraint firstItem="zo5-Xe-V95" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eK2-Tp-cII"/>
+                            <constraint firstItem="RZw-Wy-oSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="gu2-As-9eF"/>
+                            <constraint firstItem="RZw-Wy-oSB" firstAttribute="top" secondItem="yjy-r9-T6n" secondAttribute="bottom" constant="21" id="icv-48-bhr"/>
+                            <constraint firstItem="N4Y-y2-AqX" firstAttribute="top" secondItem="zo5-Xe-V95" secondAttribute="bottom" constant="17" id="lWZ-eg-qKg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yjy-r9-T6n" secondAttribute="trailing" constant="52" id="qL4-xt-z2s"/>
+                            <constraint firstItem="zo5-Xe-V95" firstAttribute="top" secondItem="RZw-Wy-oSB" secondAttribute="bottom" constant="26" id="rDQ-j9-9kW"/>
+                            <constraint firstItem="DF8-sy-uED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQf-HZ-Rwl"/>
+                            <constraint firstItem="DF8-sy-uED" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tGq-dc-SMr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
