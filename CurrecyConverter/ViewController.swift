@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        converted.text = ""
         // Do any additional setup after loading the view.
     }
 
@@ -28,9 +29,7 @@ class ViewController: UIViewController {
         let rate = Double(conversionRate.text!)!
         let amount = Double(conversionAmount.text!)!
         let conversion = rate * amount
-        
-        converted.text = "\(conversion)"
-        
+        converted.text = "\(currency.selectedSegmentIndex == 0 ? "$": "￥")\(conversion)"
     }
     
 }
